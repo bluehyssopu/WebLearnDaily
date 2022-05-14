@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* 設置背景色 设置body内的元素水平、垂直对齐 */
+body {
+    background-color: darksalmon;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    font-display: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* 设置显示控制速度 的盒子样式 */
+div {
+    position: absolute;
+    bottom: 20px;
+    /* 背景类似蒙版遮罩 */
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    font-size: 18x;
+}
+
+/* 设置速度输入框的样式 */
+input {
+    width: 50px;
+    font-size: 18px;
+    padding: 5px;
+    text-align: center;
+    background-color: darksalmon;
+    border: 0;
+}
+
+input:focus {
+    outline: none;
+}

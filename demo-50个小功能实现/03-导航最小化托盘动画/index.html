@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航最小化托盘动画</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="active" id="nav">
+        <ul>
+
+            <!-- 
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li> 
+            -->
+
+            <!-- 
+            <li><a href="#">kawldkl aakwdmk</a></li>
+            <li><a href="#">wndakaj wdikma</a></li>
+            <li><a href="#">aiwnif  kajhwndj</a></li>
+            <li><a href="#">akwn dkamw</a></li> 
+            -->
+            <!-- 当我转换成汉字后 旋转过程 汉字会出现竖直排列的情况……但英文字符串就没这个问题 但是 如果英文中间添加了空格 就会出现和汉字相同的情况…… 调整a nav li 的宽度无果 -->
+            
+            <!-- 问题抽象：弹性盒子在盒子宽度变小时 自动把汉字和多个英文单词换行 -->
+            <!-- 解决方案 父级flex显示 子级添加 flex-shrink: 0 取消自动换行 (style.css文件 第60行) -->
+            <li><a href="#">首页</a></li>
+            <li><a href="#">分类</a></li>
+            <li><a href="#">标签</a></li>
+            <li><a href="#">其他</a></li>
+            <li><a href="#">关于</a></li>
+        </ul>
+        <button class="icon" id="toggle">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+        </button>
+    </nav>
+    <script src="script.js"></script>
+
+    <!-- Dribbble link: https://dribbble.com/shots/2427219-Header-Navigation-Day-053-dailyui -->
+</body>
+
+</html>

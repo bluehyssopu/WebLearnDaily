@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d盒子背景</title>
+    <!-- 引入一个字体样式 并检验是否安全 -->
+
+    <!-- integrity 为了防止 CDN 篡改 javascript 而引入的XSS 风险。-->
+    <!-- 可以用在<script> 或者 <link>元素上，用来开启浏览器对获取的资源进行检查，它允许你为script或者link提供一个hash，用来进行验签，检验加载的JavaScript文件或者CSS问卷是否完整。如果检验 两者签名不同 则不会执行该资源 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous">
+
+    <!-- crossorigin 该枚举属性指定在加载相关图片时是否必须使用CORS。可取的值包括以下两个：
+
+    anonymous：会发起一个跨域请求（即包含Origin: HTTP头）。但不会发送任何认证信息（即不发送cookie, X.509证书和HTTP基本认证信息）。如果服务器没有给出源站凭证（不设置Access-Control-Allow-Origin: HTTP头），这张图片就会被污染并限制使用。
+    use-credentials：会发起一个带有认证信息 (发送 cookie, X.509 证书和 HTTP 基本认证信息) 的跨域请求 (即>包含 Origin: HTTP 头). 如果服务器没有给出源站凭证 (不设置 Access-Control-Allow-Origin: HTTP 头), 这张图片就会被污染并限制使用.
+    
+    当不设置该属性时, 资源将会不使用 CORS 加载 (即不发送 Origin: HTTP 头), 这将阻止其在 元素中进行使用. 若设置了非法的值, 则视为使用 anonymous.
+
+    作者：AmazingMax
+    链接：https://www.jianshu.com/p/7c7f00c0dc8c
+    来源：简书
+    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="btn" class="change"> change style </button>
+    <!-- 默认状态下是一个 包括4*4格子 的大盒子 -->
+    <div id="boxes" class="boxes big"></div>
+    <script src="script.js"></script>
+</body>
+</html>

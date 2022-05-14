@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>文章摘要卡片模糊加载</title>
+</head>
+<body>
+    <!-- 居中的卡片 展示信息 -->
+    <div class="card">
+        <!-- 文章封面 -->
+        <div class="card-header animated-bg" id="header">&nbsp;</div>
+
+        <!-- 文章信息 -->
+        <div class="card-content">
+            <!-- 标题 -->
+            <h3 class="card-titlt animated-bg animated-bg-text" id="title">&nbsp;</h3>
+
+            <!-- 文章摘要 -->
+            <p class="card-excerpt" id="excerpt">
+                &nbsp;
+                <span class="animated-bg animated-bg-text"></span>
+                <span class="animated-bg animated-bg-text"></span>
+                <span class="animated-bg animated-bg-text"></span>
+            </p>
+
+            <!-- 作者信息   包括头像、昵称、发表时间 -->
+            <div class="author">
+                <div class="profile-img animated-bg" id="profile_img">&nbsp;</div>
+
+                <div class="author-info">
+                    <strong class="animated-bg animated-bg-text" id="name">&nbsp;</strong>
+
+                    <small class="animated-bg   animated-bg-text" id="date">&nbsp;</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

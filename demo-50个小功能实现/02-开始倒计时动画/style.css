@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h4 {
+    font-size: 20px;
+    margin: 5px;
+    /* 文本大小写转换  uppercase 强制该文本全部大写 */
+    text-transform: uppercase;
+}
+
+.counter {
+    /* 经典的 盒子在网页的 中心位置显示设置 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.counter.hide {
+    transform: translate(-50%, -50%) scale(0);
+    /* 动画 淡出(慢速结束) 控制 3 2 1 倒计时的转换和隐藏*/
+    animation: hide 0.2s ease-out;
+}
+
+@keyframes hide {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+.final {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    text-align: center;
+}
+
+.final.show {
+    transform: translate(-50%, -50%) scale(1);
+    animation: show 0.2s ease-out;
+}
+
+@keyframes show {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    30% {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.nums {
+    color: #3498db;
+    font-size: 50px;
+    position: relative;
+    overflow: hidden;
+    widows: 250px;
+    height: 50px;
+}
+
+.nums span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(120deg);
+    transform-origin: bottom center;
+}
+
+.nums span.in {
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: goIn 0.5s ease-in-out;
+    /* 淡入淡出 */
+}
+.nums span.out {
+    animation: goOut 0.5s ease-in-out;
+}
+
+/* 实现旋转 左右摆动的视觉效果 */
+@keyframes goIn {
+    0% {
+        transform: translate(-50%, -50%) rotate(120deg);
+    }
+    30% {
+        transform: translate(-50%, -50%) rotate(-20deg);
+    }
+    60% {
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+@keyframes goOut {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  
+    60% {
+      transform: translate(-50%, -50%) rotate(20deg);
+    }
+  
+    100% {
+      transform: translate(-50%, -50%) rotate(-120deg);
+    }
+  }
+
+#replay {
+    background-color: #3498db;
+    border-radius: 3px;
+    border: none;
+    color: aliceblue;
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#replay span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}

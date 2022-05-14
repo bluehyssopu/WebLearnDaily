@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* 设置背景 元素居中垂直对齐 */
+body {
+    background-color: #000;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* 设置按钮样式 */
+button {
+    background-color: #23ade5;
+    color: #fff;
+    border: 1px #23ade5 solid;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 20px;
+    overflow: hidden;
+    margin: 10px 0;
+    position: relative;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* 为按钮添加 类名为circle的子元素 */
+button .circle {
+    position: absolute;
+    background-color: #fff;
+    /* 圆的样式  波纹实现格式为 圆心为点击处的圆 边框放大的动画 0.5s后透明消失*/
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,101 @@
+/* @import 引入样式 注意加上分号 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafafa;
+    /* sans-serif 无衬线字体 */
+    /* font-family最后加上sans-serif，也是为了保证能够调用这个字体族里面的字体，因为大多数计算机里都有这种字体。 */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    /* 规定弹性项目的方向 */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.change {
+    background-color: #f9ca24;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    border: 0;
+    border-radius: 3px;
+    font-size: 16px;
+    padding: 12px 20px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    /* 设置字与字之间的间距 */
+    letter-spacing: 2px;
+    /* box-shadow 给盒子添加阴影; */
+    box-shadow: 0 3px rgba(249, 202, 36, 0.5);
+    z-index: 100;
+}
+
+/* 按钮 焦点状态 */
+.change:focus {
+    /* 盒子边框样式为空 */
+    outline: none;
+}
+/* 按钮 点击状态 */
+.change:active {
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+.boxes {
+    display: flex;
+    /* 弹性盒子在需要的时候换行 常用于li标签弹性布局展示商品  */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 500px;
+    width: 850px;
+    position: relative;
+    top: 28px;
+    /* 动画0.4秒过程 快启动 慢停止 */
+    transition: 0.4s ease;
+}
+
+.boxes.big {
+    width: 950px;
+    height: 600px;
+}
+
+/* 大图切割成小盒子（小图）的样式设置 */
+.box {
+    background-image: url('https://vip1.loli.io/2022/05/05/yaiAdPZeuYRXcL5.jpg');
+    background-repeat: no-repeat;
+    background-size: 850px 500px;
+    position: relative;
+    height: 125px;
+    width: 170px;
+    transition: 0.4s ease;
+}
+/* 小盒子的外侧面 合并后仍会显示在外层 */
+.box::after {
+    content: '';
+    background-color: #eae5e6;
+    position: absolute;
+    top: 8px;
+    right: -15px;
+    height: 100%;
+    width: 15px;
+    /* 二维平面上 倾斜45度 显示出立体盒子其他面的背景色 给人立体感*/
+    transform: skewY(45deg);
+}
+/* 小盒子的内侧面 合并后看不到 */
+.box::before {
+    content: '';
+    background-color: #eae5e6;
+    position: absolute;
+    bottom: -15px;
+    left: 8px;
+    width: 100%;
+    height: 15px;
+    transform: skewX(45deg);
+}
