@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 400px;
+            height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <caption><h2>学生成绩单</h2></caption>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>成绩</th>
+                <th>等级</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>张三</td>
+                <td>66</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td rowspan="2">77</td>
+                <!-- 我七七满命了 嘿嘿嘿~~ -->
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>王五</td>
+                <td>A</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>总结</td>
+                <td colspan="2">毁灭吧、赶紧的</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

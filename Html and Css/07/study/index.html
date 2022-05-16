@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- 从外到内 从上到小 从左往右 -->
+    <!-- css 浮动display 盒子模型宽高 文字样式 -->
+    <!-- 先写默认的 常用的样式 如* clearfix li a 等 -->
+
+
+
+    <!-- 头部header负责头部区域的样式     wrapper只负责版心的效果 -->
+    <div class="header wrapper">
+        <!-- 对于头部的logo 一般 h1 > a  -->
+        <h1>
+            <a href="#"><img src="./img/logo.png" alt=""></a>
+        </h1>
+        <!-- 导航 -->
+        <div class="nav">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">课程</a></li>
+                <li><a href="#">职业规划</a></li>
+            </ul>
+        </div>
+        <!-- 搜索框 -->
+        <div class="search">
+            <input type="text" name="" id="" placeholder="请输入关键词">
+            <button></button>
+        </div>
+        <!-- 用户 -->
+        <div class="user">
+            <img src="img/user.png" alt="">
+            <span>客怎眠qvq</span>
+        </div>
+    </div>
+
+    <!-- 轮播图banner区域 -->
+    <div class="banner">
+        <div class="wrapper">
+            <div class="left">
+                <ul>
+                    <li><a href="#">前端开发<span>></span></a></li>
+                    <li><a href="#">后端开发<span>></span></a></li>
+                    <li><a href="#">移动开发<span>></span></a></li>
+                    <li><a href="#">人工智能<span>></span></a></li>
+                    <li><a href="#">商业预测<span>></span></a></li>
+                    <li><a href="#">云加速&大数据<span>></span></a></li>
+                    <li><a href="#">运维&测试<span>></span></a></li>
+                    <li><a href="#">UI设计<span>></span></a></li>
+                    <li><a href="#">产品<span>></span></a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <h2>我的课程表</h2>
+                <div class="content">
+                    <dl>
+                        <dt><a href="#">继续学习 程序语言设计</a></dt>
+                        <dd><a href="#">正在学习-使用对象</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">继续学习 数据结构与算法</a></dt>
+                        <dd><a href="#">正在学习-使用对象</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">继续学习 web开发实战</a></dt>
+                        <dd><a href="#">正在学习-使用对象</a></dd>
+                    </dl>
+                </div>
+                <a href="#" class="more">全部课程</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 精品推荐 -->
+    <div class="goods wrapper">
+        <ul>
+            <li><a href="#">精品推荐</a></li>
+            <li><a href="#">jQuery</a></li>
+            <li><a href="#">Spark</a></li>
+            <li><a href="#">MySQL</a></li>
+            <li><a href="#">JavaWeb</a></li>
+            <li><a href="#">PHP</a></li>
+        </ul>
+        <a href="#" class="inter">修改兴趣</a>
+    </div>
+
+    <!-- 精品推荐区域商品 -->
+    <div class="course wrapper">
+        <h2>精品课程</h2>
+        <ul class="clearfix">
+            <li><img src="img/course01.png" alt="">
+                <h3>Think PHP 5.0 博客系统实战项目演练</h3>
+                <p><span>高级</span>• 1125人在学习</p>
+                <!-- 定位的hot小图 -->
+                <img src="img/hot.png" alt="" class="hot">
+            </li>
+            <li><img src="img/course02.png" alt="">
+                <h3>Android 网络图片加载框架详解 </h3>
+                <p><span>高级</span>• 1125人在学习</p>
+                <img src="img/hot.png" alt="" class="hot">
+            </li>
+            <li><img src="img/course03.png" alt="">
+                <h3>Angular 2 最新框架+主流技术+项目实战</h3>
+                <p><span>高级</span>• 1125人在学习</p>
+            </li>
+            <li><img src="img/course04.png" alt="">
+                <h3>Android Hybrid APP开发实战 H5+原生</h3>
+                <p><span>高级</span>• 1125人在学习</p>
+            </li>
+            <li><img src="img/course05.png" alt="">
+                <h3>Android Hybrid APP开发实战 H5+原生！</h3>
+                <p><span>高级</span>• 1125人在学习</p>
+            </li>
+            <li><img src="img/course06.png" alt="">
+                <h3>Kami2首页切换效果</h3>
+                <p><span>高级</span>• 1125人在学习</p>
+            </li>
+            <li><img src="img/course07.png" alt="">
+                <h3>Unity 入门</h3>
+                <p><span>高级</span>• 1125人在学习</p>
+            </li>
+            <li><img src="img/course08.png" alt="">
+                <h3>Cocos</h3>
+                <p><span>高级</span>• 1125人在学习</p>
+            </li>
+            <li><img src="img/course01.png" alt="">
+                <h3>Think PHP 5.0 博客系统实战项目演练</h3>
+                <p><span>高级</span>• 1125人在学习</p>
+            </li>
+            <li><img src="img/course02.png" alt="">
+                <h3>Android 网络图片加载框架详解</h3>
+                <p><span>高级</span>• 1125人在学习</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <div class="content wrapper">
+            <div class="left">
+                <img src="img/logo.png" alt="">
+                <p>学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程。<br> © 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号</p>
+                <a href="#" class="download">下载APP</a>
+            </div>
+
+            <div class="right">
+                <dl>
+                    <dt>合作伙伴</dt>
+                    <dd><a href="#">合作机构</a></dd>
+                    <dd><a href="#">合作导师</a></dd>
+                </dl>
+                <dl>
+                    <dt>新手指南</dt>
+                    <dd><a href="#">如何注册</a></dd>
+                    <dd><a href="#">如何选课</a></dd>
+                    <dd><a href="#">如何拿到毕业证</a></dd>
+                    <dd><a href="#">学分是什么</a></dd>
+                    <dd><a href="#">考试未通过怎么办</a></dd>
+                </dl>
+                <dl>
+                    <dt>关于学成网</dt>
+                    <dd><a href="#">关于</a></dd>
+                    <dd><a href="#">管理团队</a></dd>
+                    <dd><a href="#">工作机会</a></dd>
+                    <dd><a href="#">客户服务</a></dd>
+                    <dd><a href="#">帮助</a></dd>
+                </dl>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

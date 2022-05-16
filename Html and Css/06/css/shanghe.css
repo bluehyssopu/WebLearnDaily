@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* 导航栏 */
+.nav {
+    width: 1350px;
+    height: 40px;
+    border-image: url('../img/nav_border.png') fill repeat;
+    margin: 10px auto;
+    background-color: #fff;
+    background: url('../img/nav_bg.png') repeat;
+}
+
+.nav ul {
+    display: block;
+    width: 980px;
+    height: 40px;
+    margin: 10px auto;
+    list-style: none;
+}
+
+.nav ul li {
+    float: left;
+    text-align: center;
+}
+
+.nav ul li a {
+    box-sizing: border-box;
+    display: block;
+    float: right;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    color: #000000;
+    font-weight: bold;
+    border-right: 1px solid #c7c7c7;
+    text-decoration: none;
+}
+
+.nav ul li:last-child a {
+    border-right: none;
+}
+
+/* 顶部 logo 及 搜索框*/
+.top {
+    margin: 0 auto;
+    width: 980px;
+    height: 60px;
+}
+
+.top .logo {
+    float: left;
+    height: 50%;
+    margin: 15px 0;
+}
+
+.top .search {
+    float: right;
+    height: 30px;
+    width: 200px;
+    box-sizing: border-box;
+    margin: 15px 0;
+    background: url(../img/search.png) no-repeat;
+    border: none;
+}
+
+/* banner图 */
+.banner {
+    width: 981px;
+    height: 620px;
+    margin: 0px auto;
+}
+
+/* 新闻公告条 */
+.news_all {
+    margin: 0 auto;
+    height: 30px;
+    width: 1350px;
+    background: #fbfbfb;
+    border: 1px solid #efefef;
+}
+
+.news {
+    width: 980px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.news .left {
+    float: left;
+    line-height: 30px;
+}
+
+.news .left span {
+    font-weight: bold;
+}
+
+.news .left a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.news .right {
+    float: right;
+    margin-top: 5px;
+}
+
+.news .right img {
+    width: 100%;
+}
+
+/* 三个卡片 */
+.con {
+    width: 980px;
+    height: 250px;
+    margin: 15px auto 0;
+}
+
+.con .left {
+    width: 313px;
+    height: 250px;
+    border: 1px solid #cccccc;
+    float: left;
+}
+
+.con .left .title {
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #7ab800;
+}
+
+.con .left .title h3 {
+    background: url(../images/con1.png) no-repeat;
+    padding-left: 22px;
+}
+
+.con .leftJ {
+    float: left;
+    margin: 65px 65px 0px 25px;
+}
+
+.con ul {
+    float: left;
+    margin-top: 15px;
+}
+
+.con .rightJ {
+    float: left;
+    margin: 65px 25px 0px 65px;
+}
+
+
+.con .center {
+    width: 375px;
+    height: 250px;
+    border: 1px #cccccc solid;
+    float: left;
+    margin-left: 9px;
+}
+
+.con .center .title {
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #7ab800;
+}
+
+.con .center .title h3 {
+    background: url(../img/jiantou.png) no-repeat left center;
+    padding-left: 22px;
+    float: left;
+}
+
+.con .center .title .more {
+    float: right;
+    margin-right: 5px;
+    font-size: bold;
+    color: #717171;
+}
+
+.center .conCen .ulCen ul {
+    text-align: center;
+}
+
+.center .conCen .ulCen li {
+    width: 327px;
+    height: 30px;
+    margin-left: 22px;
+    border-bottom: 1px #dcdcdc dashed;
+    color: #717171;
+    line-height: 30px;
+}
+
+.center .conCen .ulCen span {
+    font-weight: bold;
+    color: red;
+}
+
+.center .conCen .ulCen a {
+    font-size: 14px;
+    color: #656565;
+}
+
+.con .right {
+    width: 270px;
+    height: 250px;
+    border: 1px solid #cccccc;
+    float: right;
+}
+
+.con .right .title {
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #7ab800;
+}
+
+.con .right .title h3 {
+    background: url(../img/jiantou.png) no-repeat left center;
+    padding-left: 22px;
+    float: left;
+}
+
+.right .rigCon .rigUl li {
+    width: 230px;
+    height: 20px;
+    line-height: 20px;
+    /* font-weight: bold; */
+    background: url(../img/sbg.png) no-repeat left center;
+    margin-left: 20px;
+    padding-left: 8px;
+}
+
+.right .rigCon .rigUl li a {
+    font-size: 14px;
+    color: #717171;
+}
+
+.right .p1 p {
+    margin-top: 140px;
+    margin-left: 28px;
+    color: #717171;
+    font-size: 14px;
+}
+
+/* 底部 */
+.last {
+    background: #2d2d2d;
+    margin-top: 50px;
+}
+
+.last .center {
+    width: 980px;
+    height: 220px;
+    margin: 0px auto;
+    padding: 20px;
+    border-top: #414141 2px dashed;
+}
+
+.last .center dl {
+    float: left;
+    width: 116px;
+    height: 220px;
+}
+
+.last .center dt {
+    height: 28px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.last .center dd {
+    color: #c7c7c7;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.last .center .img {
+    float: right;
+    
+}
+
+.last .bottom {
+    text-align: center;
+    color: #c7c7c7;
+    line-height: 20px;
+}

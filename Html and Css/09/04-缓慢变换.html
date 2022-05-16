@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 配合hover使用 谁变化谁加过渡属性 */
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+
+            /* 控制变化的属性 及变化时间 */
+            transition: width 2s;
+        }
+
+        /* 鼠标悬停 宽度缓慢变为600px */
+        .box:hover {
+            width: 600px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

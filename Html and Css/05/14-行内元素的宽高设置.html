@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+        .row {
+            /* 只有左右有20px的间距 */
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff4ac;
+        }
+        .col {
+            margin-top: 20px;
+            padding-top: 20px;
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. 水平方向的margin和padding布局中有效！ -->
+    <span class="row">
+        水平方向设置有效 
+    </span>
+    <!-- 2. 垂直方向的margin和padding布局中无效！ -->
+    <span class="col">
+        竖直方向无效 
+    </span>
+    <br><br>
+    <p>我们看到的padding-bottom的高度其实是行高 要想改变垂直的数据 修改 line-height即可</p>
+</body>
+</html>

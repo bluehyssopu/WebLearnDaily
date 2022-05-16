@@ -1,0 +1,210 @@
+/* 各个页面相同的样式 如 banner */
+/* 版心 */
+.wrapper {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+/* 快捷菜单 */
+.shortcut {
+    height: 52px;
+    background-color: #333;
+}
+.shortcut .wrapper {
+    height: 52px;
+    /* background-color: pink; */
+}
+.shortcut .wrapper ul {
+    float: right;
+}
+.shortcut .wrapper li {
+    float: left;
+    line-height: 52px;
+}
+.shortcut .wrapper ul li a {
+    padding: 0 16px;
+    border-right: 1px solid #666;
+    font-size: 14px;
+    color: #fff;
+}
+.shortcut .wrapper a span {
+    display: inline-block;
+    width: 11px;
+    height: 16px;
+    background-image: url(../img/sprites.png);
+    background-position: -160px -70px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* 头部 */
+.header {
+    margin: 30px auto;
+    height: 70px;
+}
+/* logo SEO 搜索引擎优化 */
+.header .logo {
+    float: left;
+    width: 207px;
+    height: 70px;
+    /* background-color: pink; */
+}
+.header .logo h1 {
+    width: 207px;
+    height: 70px;
+}
+.header .logo a {
+    display: block;
+    width: 207px;
+    height: 70px;
+    background-image: url(../img/logo.png);
+    background-size: contain;
+    font-size: 0;
+    /* 这句很重要 让文字看不见 同时提升搜索引擎排名 */
+}
+
+.header .nav {
+    float: left;
+    margin-left: 40px;
+    height: 70px;
+    
+}
+.header .nav li {
+    float: left;
+    margin-right: 48px;
+    line-height: 70px; 
+}
+.header .nav li a {
+    padding-bottom: 7px;
+}
+.header .nav li a:hover {
+    color: #27ba9b;
+    border-bottom: 2px solid #27ba9b;
+}
+
+.header .search {
+    position: relative;
+    float: left;
+    margin-top: 24px;
+    margin-left: 34px;
+    width: 172px;
+    height: 30px;
+    border-bottom: 2px solid #e7e7e7;
+}
+.header .search input {
+    padding-left: 30px;
+    width: 172px;
+    height: 28px;
+}
+.header .search::placeholder {
+    font-size: 14px;
+    color: #ccc;
+}
+.header .search span {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/sprites.png);
+    background-position: -79px -69px;
+}
+.header .car {
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    margin-top: 28px;
+    width: 23px;
+    height: 23px;
+    background-image: url(../img/sprites.png);
+    background-position: -120px -69px;
+}
+.header .car span {
+    /* 绝对定位 盒子具备行内块特点 */
+    position: absolute;
+    top: -6px;
+    right: -13px;
+    width: 20px;
+    height: 15px;
+    background-color: #e26237;
+    border-radius: 10px;
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+}
+
+/* 版权footer */
+.footer {
+    height: 342px;
+    background-color: #333;
+}
+
+.footer .wrapper {
+    width: 1393px;
+}
+
+.footer .top {
+    padding-top: 59px;
+    padding-left: 135px;
+    height: 175px;
+    border-bottom: 3px solid #434343;
+}
+
+.footer .top li {
+    position: relative;
+    float: left;
+    margin-right: 300px;
+    width: 195px;
+    height: 58px;
+
+    line-height: 58px;
+}
+
+.footer .top li:last-child {
+    margin-right: 0;
+}
+
+/* 伪元素添加的标签  行内 */
+/* 如果行内块和行内文字无法通过vertical-align或行高对齐, 定位 */
+.footer .top li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* display: inline-block; */
+    content: '';
+    width: 58px;
+    height: 58px;
+    background-image: url(../img/sprites.png);
+    vertical-align: middle;
+}
+
+.footer .top li span {
+    margin-left: 77px;
+    font-size: 28px;
+    color: #fff;
+}
+
+/* 第二个li里面的berfore添加背景图位置属性 */
+.footer .top li:nth-child(2)::before {
+    background-position: -130px 0;
+}
+.footer .top li:nth-child(3)::before {
+    background-position: -64px 0;
+}
+
+.footer .bottom {
+    padding-top: 40px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+}
+
+.footer .bottom a {
+    font-size: 14px;
+    color: #999;
+}
+
+.footer .bottom p {
+    margin-bottom: 20px;
+}

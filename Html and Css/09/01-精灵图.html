@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 18px;
+            height: 24px;
+            background-color: pink;
+            background-image: url(./img/taobao.png);
+
+            /* 背景图位置属性 只需要改变背景图的位置 */
+            /* background-position: 水平方向 垂直方向; */
+            /* 向左侧移动图片 位置取负数 */
+            background-position: -3px 0;
+        }
+
+        b {
+            display: block;
+            width: 25px;
+            height: 21px;
+            background-color: green;
+            background-image: url(./img/taobao.png);
+            background-position: 0 -90px;
+            /* 后续使用js 在循环中自动计算position 不需要人工计算 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 精灵图都用行内标签 span b i -->
+    <span></span>
+    <b></b>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: #fffc4f;
+            /* 最好的方法 */
+            overflow: hidden;
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: #ff0000;
+            /* 单纯使用 margin-top: 100px; 父元素和子元素一起下降100px 坑爹现象*/
+            margin-top: 40px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

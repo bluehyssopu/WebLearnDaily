@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top {
+            margin: 0 auto;
+            width: 1000px;
+            /* height: 300px; */
+            /* 如果子元素均为浮动 父元素又没有高度以撑起盒子 就会出现底部盒子上升的现象 */
+            background: pink;
+        }
+        .bottom {
+            height: 100px;
+            background-color: green;
+        }
+        .left {
+            float: left;
+            width: 250px;
+            height: 300px;
+            background-color: #f00;
+        }
+        .right {
+            float: right;
+            width: 700px;
+            height: 300px;
+            background-color: #00f;
+        }
+        .clearfix {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="bottom"></div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            height: 40px;
+            border-bottom: 1px solid #ccc;
+        }
+        .nav ul {
+            width: 1200px;
+            height: 40px;
+            margin: 0 auto;
+            list-style: none;
+        }
+        .nav ul li {
+            float: left;
+            width: 20%;
+            height: 40px;
+            border-right: 1px solid #ccc;
+            /* 自动内减 如果出现最后一个元素一直在第二行的现象 可能就是缺少这行代码*/
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 40px;
+            
+        }
+        .nav ul li a {
+            display: block;
+            height: 40px;
+            text-decoration: none;
+            color: #000000;
+        }
+        .nav ul li:last-child {
+            border-right: none;
+        }
+
+        .nav ul li .app {
+            position: relative;
+        }
+        .code {
+            position: absolute;
+            top: 45px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="#">我要投资</a></li>
+            <li><a href="#">平台介绍</a></li>
+            <li><a href="#">新手专区</a></li>
+            <li><a href="#" class="app">手机微金所 <img src="img/code.jpg" class="code"></a></li>
+            <li><a href="#">个人中心</a></li>
+        </ul>
+    </div>
+</body>
+</html>
