@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>随机笑话</title>
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <h3>随机笑话</h3>
+      <p class="joke"> {{ joke }} </p>
+      <input type="button" value="获取笑话" @click="getJoke" class="btn">
+  </div>
+    
+  </div>
+
+  <!-- axios在线地址 -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <!-- vue开发环境版本 -->
+  <script src="../vue.js"></script>
+  <!-- axios调用随机笑话api -->
+  <script src="script.js"></script>
+</body>
+</html>

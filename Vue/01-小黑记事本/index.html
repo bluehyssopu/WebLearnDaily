@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>记事本</title>
+</head>
+
+<!-- 
+  1、列表结构通过v-for指令结合数据生成
+  2、v-on结合事件修饰符可以对事件进行限制 比如.enter
+  3、v-on在绑定事件时可以传递自定义参数
+  4、通过v-model可以快速的设置和获取表单元素的值
+  5、基于数据开发
+ -->
+
+<body>
+  <!-- 记事区域 -->
+  <section id="todoapp">
+    <!-- 输入框 -->
+    <header class="header">
+      <h1>ToDoList</h1>
+      <!-- 输入备忘，使用 v-model 绑定 inputValue（输入值）获取用户输入 -->
+      <!-- 监听 keyup 事件，同时使用修饰器 .enter，按 Enter 键时事件才触发 -->
+      <input v-model="inputValue" @keyup.enter="add" autofocus="autofocus" autocomplete="off" placeholder="请输入任务" class="new-todo">
+    </header>
+
+    <!-- 列表区域 -->
+    <section class="main">
+      <ul class="todo-list">
+        <li class="todo" v-for="(item,index) in list">
+          <div class="view">
+            <span class="index">{{ index+1 }}.</span>
+            <label>{{ item }}</label>
+            <button class="destroy" @click="remove(index)"></button>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 统计和清空 -->
+    <!-- v-text splice -->
+    <!-- 当list为空时 隐藏清空按钮clear和剩余项统计count 当然也可以给父元素绑定v-if -->
+    <footer class="footer">
+      <span class="todo-count" v-if="list.length!=0">
+        <strong>{{ list.length }}</strong> items left
+      </span>
+      <button v-show="list.length!=0" class="clear-completed" @click="clear">
+        Clear
+      </button>
+    </footer>
+  </section>
+
+  <script src="../vue.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

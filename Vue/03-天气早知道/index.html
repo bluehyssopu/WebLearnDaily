@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>天气早知道</title>
+</head>
+
+<body>
+  <div id="app">
+    <div id="main">
+      <!-- 标题 -->
+      <h2>天气查询</h2>
+      <!-- 搜索框 -->
+      <div id="search">
+        <input v-model="city" type="text" @keyup.enter="searchWeather" id="city">
+        <button @click="searchWeather" class="btn">搜索</button>
+      </div>
+      <div class="sicity">
+        <a @click="changeCity('上海')">上海</a>
+        <a @click="changeCity('北京')">北京</a>
+        <a @click="changeCity('广州')">广州</a>
+        <a @click="changeCity('深圳')">深圳</a>
+      </div>
+    </div>
+    <div class="week">
+      <li v-for="item in weatherList">
+        <span v-cloak>{{ item.type }}</span>
+        <p v-cloak>{{ item.low }} ~ {{ item.high }}</p>
+        <div v-cloak>{{ item.date }}</div>
+      </li>
+    </div>
+  </div>
+
+  <script src="../vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
