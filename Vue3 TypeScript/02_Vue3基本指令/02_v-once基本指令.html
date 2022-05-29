@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v-once基本指令</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <template id="my-app">
+    <h2>{{ counter }}</h2>
+    <h2 v-once>{{ counter }}</h2>
+    <p>第二个100不会+1 因为v-once使用 将100当作静态资源 不改变</p>
+    <button @click="counter++">点击我会 +1</button>
+  </template>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const App = {
+      template: '#my-app',
+      data() {
+        return {
+          message: "Hello World",
+          counter: 100,
+        }
+      },
+    }
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>

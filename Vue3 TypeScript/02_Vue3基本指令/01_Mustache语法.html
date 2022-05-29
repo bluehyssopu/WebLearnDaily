@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_Mustache语法</title>
+</head>
+<body>
+  <!-- 学习了用户代码片段的自定义 -->
+  <!-- https://snippet-generator.app 自动生成 -->
+  <div id="app"></div>
+
+  <template id="my-app">
+    <!-- 1. 基本使用 -->
+    <h2>{{ message }}</h2>
+    <!-- 2. 表达式写法 -->
+    <h2>{{ counter + 10}}</h2>
+    <h2>{{ message.split(" ").reverse().join(" ") }}</h2>
+    <!-- 3. 调用函数 可以使用computed -->
+    <h2>{{ getReverseMessage() }}</h2>
+    <!-- 4. 三元运算符 -->
+    <h2>{{ isShow ? "show √" : "" }}</h2>
+    <button @click="toggle"> 切换 </button>
+
+    <!-- 注意： 可以丢表达式进去  但不能丢赋值语句进去 -->
+    <!-- 错误示范 -->
+    <!-- <h2>{{ var name = "kzmqvq" }}</h2>
+    <h2>{{ if(isShow) { return "show √" } }}</h2> -->
+  </template>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const App = {
+      template: '#my-app',
+      data() {
+        return {
+          message: "Hello World",
+          counter: 100,
+          isShow: true,
+        }
+      },
+      methods: {
+        getReverseMessage() {
+          return this.message.split(" ").reverse().join(" ");
+        },
+        toggle() {
+          // isShow 和 siShow 实际开发上 注意拼写错误
+          this.isShow = !this.isShow;
+        }
+      },
+    }
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>

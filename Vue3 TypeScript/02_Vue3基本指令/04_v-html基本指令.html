@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v-html</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <template id="my-app">
+    <h2>{{ vHtml }}</h2>
+    <h2 v-html="vHtml"></h2>
+  </template>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const App = {
+      template: '#my-app',
+      data() {
+        return {
+          message: "Hello World",
+          vHtml: "<div style='color: red'>v-html 可以渲染html语句 避免直接被当作字符串展示</div>"
+        }
+      },
+    }
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>
