@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 引入图标库 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <title>随机密码生成</title>
+</head>
+<body>
+  <!-- 大盒子 存放 生成密码结果盒和密码格式设置盒 -->
+  <div class="container">
+    <!-- 结果盒 包括结果框 和 复制按钮 -->
+    <div class="result-container">
+      <span id="result"></span>
+      <button class="btn" id="clipboard">
+        <i class="far fa-clipboard"></i>
+      </button>
+    </div>
+
+    <!-- 格式设置盒 -->
+    <div class="settings">
+      <!-- 密码长度设置 -->
+      <div class="setting">
+        <label>密码长度</label>
+        <input type="number" id="length" min="4" max="20" value="20">
+      </div>
+      <!-- 密码是否有大写字母 -->
+      <div class="setting">
+        <label>包括大写字母</label>
+        <input type="checkbox" id="uppercase" checked>
+      </div>
+      <!-- 小写字母 -->
+      <div class="setting">
+        <label>包括小写字母</label>
+        <input type="checkbox" id="lowercase" checked>
+      </div>
+      <!-- 数字 -->
+      <div class="setting">
+        <label>包括数字</label>
+        <input type="checkbox" id="numbers" checked>
+      </div>
+      <!-- 特殊符号 -->
+      <div class="setting">
+        <label>包括特殊符号</label>
+        <input type="checkbox" id="symbols" checked>
+      </div>
+    </div>
+
+    <!-- 按钮 生成结果 -->
+    <button class="btn btn-large" id="generate">生成密码</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
