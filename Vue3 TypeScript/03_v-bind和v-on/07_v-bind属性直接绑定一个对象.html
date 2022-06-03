@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v-bind属性直接绑定一个对象</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <!-- 直接 v-bind="" 没有class等其他什么 也没有: -->
+  <!-- 以后其他组件库 调用时结合v-bind会很方便 -->
+  <template id="my-app">
+    <div v-bind="info">v-bind 直接绑定</div>
+    <!-- 可以这样写 但是不建议 <div :="info">v-bind 直接绑定</div> -->
+  </template>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const App = {
+      template: '#my-app',
+      data() {
+        return {
+          message: "Hello World",
+          info: {
+            name: "kzmqvq",
+            age: "20",
+            height: "173"
+          }
+        }
+      },
+    }
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>

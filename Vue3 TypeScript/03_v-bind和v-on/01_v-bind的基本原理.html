@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+  
+  <!-- template根元素的个数 -->
+  <!-- vue2 模板中只有一个根元素 vue3中 允许有多个根元素 -->
+  <template id="my-app">
+    <!-- 1. v-bind的基本使用 -->
+    <img v-bind:src="imgUrl" style="width: 200px;" alt="">
+    <a v-bind:href="link">某菜鸟的小窝</a>
+    <br>
+
+    <!-- 2. 语法糖 简写 -->
+    <img :src="imgUrl" style="width: 200px;" alt="">
+    <!-- 错误写法 -->
+    <img src="imgUrl" alt="">
+    
+  </template>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const App = {
+      template: '#my-app',
+      data() {
+        return {
+          imgUrl: "https://www.kzmqvq.com/img/avatar.png",
+          link: "http://www.kzmqvq.com",
+        }
+      },
+    }
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>

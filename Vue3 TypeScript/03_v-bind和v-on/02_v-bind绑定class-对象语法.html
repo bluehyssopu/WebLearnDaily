@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v-bind 绑定 对象语法</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <template id="my-app">
+    <div :class="className"> "className" </div>
+    <!-- 对象语法 {'active': boolean} -->
+    <div :class="{'active': isActive}"> "{'active': boolean}" 打开控制台 点击按钮发现 class=active消失</div>
+    <button @click="toggle"> 切换active </button>
+
+    <!-- 可以有多个键值对 -->
+    <div :class="{'active': isActive, 'title': true}">可以有多个键值对</div>
+
+    <!-- 键的单引号可以不加 title: true 但是 注意有短横杠的情况 如font-size -->
+
+    <!-- 默认的class 和 动态的class结合 -->
+    <div class="abc cba" :class="{active: isActive, title: true}">默认的class 和 动态的class结合</div>
+
+    <!-- 将对象放到单独的属性中 -->
+    <div class="abc cba" :class="classObj">将对象放到单独的属性中</div>
+
+    <!-- 将返回的对象放到一个method方法中 -->
+    <div class="abc cba" :class="getClassObj()"></div>
+  </template>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const App = {
+      template: '#my-app',
+      data() {
+        return {
+          message: "Hello World",
+          className: 'kzmqvq',
+          isActive: true,
+          classObj: {
+            active: true,
+            title: true,
+          }
+        }
+      },
+      methods: {
+        toggle() {
+          this.isActive = !this.isActive
+        },
+        getClassObj() {
+          return {
+            active: true,
+            title: true,
+          }
+        }
+      },
+    }
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>
