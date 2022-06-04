@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数组监听</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <template id="my-app">
+      <ul>
+        <li v-for="(value, index) in movies">{{ index + +1 }}. {{ value }}</li>
+      </ul>
+      <input type="text" v-model="newMovie" @keyup.enter="addMovie">
+      <button @click="addMovie">添加电影</button>
+    </template>
+
+    <script src="../js/vue.js"></script>
+    <script>
+      const App = {
+        template: "#my-app",
+        data() {
+          return {
+            message: "Hello World",
+            newMovie: "",
+            movies: [
+              "惊天魔盗团", 
+              "变形金刚", 
+              "钢铁侠", 
+              "蜘蛛侠：英雄无归"
+            ],
+          };
+        },
+        methods: {
+          addMovie(event) {
+            this.movies.push(this.newMovie);
+            this.newMovie = "";
+          },
+        },
+      };
+
+      Vue.createApp(App).mount("#app");
+    </script>
+  </body>
+</html>

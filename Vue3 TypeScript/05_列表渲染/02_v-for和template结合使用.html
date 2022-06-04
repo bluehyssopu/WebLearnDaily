@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .divider {
+      list-style: none;
+      border-bottom: 1px solid #000;
+    }
+  </style>
+  <title>v-for 和 template</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <template id="my-app">
+    <ul>
+      <template v-for="(value, name) in info">
+        <li>{{ name }}</li>
+        <li>{{ value }}</li>
+        <li class="divider"></li>
+      </template>
+    </ul>
+  </template>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const App = {
+      template: '#my-app',
+      data() {
+        return {
+          message: "Hello World",
+          info: {
+            name: 'kzmqvq',
+            age: 22,
+            sex: '男'
+          }
+        }
+      },
+    }
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v-for的基本使用</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <template id="my-app">
+    <h2>电影列表</h2>
+    <ul>
+      <!-- 1. 遍历数组 -->
+      <li v-for="item in movies">{{ item }}</li>
+    </ul>
+    <ul>
+      <!-- 数组可以有两个参数 -->
+      <li v-for="(item, index) in movies">{{ index }}. {{ item }}</li>
+    </ul>
+
+    <h2>个人信息</h2>
+    <ul>
+      <!-- 2. 遍历对象 -->
+      <h2>参数的位置是固定的 按顺序赋值 不会因为参数的命名改变而改变</h2>
+      <!-- 一个参数作为索引 -->
+      <h3>一个参数 value in info</h3>
+      <li v-for="value in info">{{ value }}</li>
+      <!-- 两个参数作为索引 -->
+      <h3>两个参数 (value, name) in info</h3>
+      <li v-for="(value, name) in info">{{ name }}: {{ value }}</li>
+      <!-- 3个参数作为索引 -->
+      <h3>三个参数 (value, name, index) in info</h3>
+      <li v-for="(value, name, index) in info">{{ index }}. {{ name }} : {{ value }}</li>
+    </ul>
+
+    <!-- 3. 也可以对数字进行遍历 -->
+    <ul>
+      <li v-for="num in 20">{{ num }}</li>
+    </ul>
+  </template>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const App = {
+      template: '#my-app',
+      data() {
+        return {
+          message: "Hello World",
+          movies: [
+            '惊天魔盗团',
+            '变形金刚',
+            '钢铁侠',
+            '蜘蛛侠：英雄无归'
+          ],
+          info: {
+            name: 'kzmqvq',
+            age: 22,
+            sex: '男'
+          }
+        }
+      },
+    }
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>
