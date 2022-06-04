@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>template和v-if结合使用</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <template id="my-app">
+    <template v-if="isShow">
+      <h2>hhhhh</h2>
+      <h2>hhhhh</h2>
+      <h2>hhhhh</h2>
+    </template>
+    <!-- 为false时 template不会渲染 类似于小程序的block -->
+    <template>
+      <h2>else</h2>
+      <h2>else</h2>
+      <h2>else</h2>
+    </template>
+  </template>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const App = {
+      template: '#my-app',
+      data() {
+        return {
+          message: "Hello World",
+          isShow: true
+        }
+      },
+    }
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>
