@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>methods和计算属性的区别</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <template id="my-app">
+    <h2>{{ getFullName() }}</h2>
+    <h2>{{ getFullName() }}</h2>
+    <h2>{{ getFullName() }}</h2>
+    <h2>{{ getFullName() }}</h2>
+    <h2>{{ getFullName() }}</h2>
+
+    <h2>{{ fullName }}</h2>
+    <h2>{{ fullName }}</h2>
+    <h2>{{ fullName }}</h2>
+    <h2>{{ fullName }}</h2>
+    <h2>{{ fullName }}</h2>
+  </template>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const App = {
+      template: '#my-app',
+      data() {
+        return {
+          message: "Hello World",
+          // firstName: "Kobe",
+          firstName: "Coder",
+          lastName: "Bryant"
+        }
+      },
+      methods: {
+        getFullName() {
+          console.log("使用methods进行计算");
+          return this.firstName + " " + this.lastName;
+        }
+      },
+      computed: {
+        // 计算属性是由缓存的 下次使用时 可以直接读取缓存 提高性能
+        // 计算属性会随着依赖的数据的改变，而重新进行计算
+
+        // fullName: { get: function() {}, set: function() {} }的语法糖  简写
+        fullName() {
+          console.log("使用computed进行计算");
+          return this.firstName + " " + this.lastName;
+        }
+      },
+    }
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>
