@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>侦听器的基本使用</title>
+  <!-- https://v3.cn.vuejs.org/guide/computed.html#侦听器 -->
+</head>
+<body>
+  <div id="app"></div>
+
+  <template id="my-app">
+    您的问题: <input type="text" v-model="question">
+    <!-- <button @click="queryAnswer">查找答案</button> -->
+  </template>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const App = {
+      template: '#my-app',
+      data() {
+        return {
+          // 侦听question发生变化时，进行相应的逻辑处理（JavaScript、网络请求）
+          question: "Hello World",
+          answer: ""
+        }
+      },
+      // 当需要在数据变化时执行异步或开销较大的操作时，这个方式是最有用的
+      // 通常更好的做法是使用计算属性而不是命令式的 watch 回调
+      watch: {
+        // question 侦听data中的属性名称
+        // newValue 变化后的新值
+        // oldValue 变化前的旧值
+        question(newValue, oldValue) {
+          console.log("新值: ", newValue, "旧值: ", oldValue);
+          this.queryAnswer();
+        }
+      },
+      methods: {
+        queryAnswer() {
+          console.log(`你的问题${ this.question }}的答案是：hhhhh`);
+          this.answer = ""
+        }
+      },
+    }
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>
