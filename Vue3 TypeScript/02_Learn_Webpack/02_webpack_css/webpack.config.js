@@ -20,16 +20,26 @@ module.exports = {
           // { loader: "css-loader" }
           "style-loader",
           "css-loader",
+          "postcss-loader",
+          // 自动添加浏览器前缀 指明autoprefixer的loader
+          // {
+          //   loader: 'postcss-loader',
+          //   options: {
+          //     postcssOptions: {
+          //       plugins: [
+          //         require('autoprefixer')
+          //       ]
+          //     }
+          //   }
+          // }
         ],
       },
       {
+        // 也可以合并
+        // test: /\.(css|less)$/,
         test: /\.less$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          "less-loader"
-        ]
-      }
+        use: ["style-loader", "css-loader", "less-loader"],
+      },
     ],
   },
 };
