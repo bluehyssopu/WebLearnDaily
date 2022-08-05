@@ -1,0 +1,41 @@
+<!-- 身为一名专业摸鱼人 每天不喝八杯水就是对自己的不负责 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>喝水量统计</title>
+</head>
+<body>
+  <h1>喝水量统计</h1>
+  <h3>目标： 每日两升水</h3>
+
+  <div class="cup">
+    <!-- 还需要喝水的量 (剩余量) -->
+    <div class="remained" id="remained">
+      <span id="liters"></span>
+      <small></small>
+    </div>
+    <!-- 已喝水量 占比 -->
+    <div class="percentage" id="percentage"></div>
+  </div>
+
+  <!-- 默认一杯水250ml 以2*4的矩阵排列 -->
+  <!--被子编号依次为 1 2 3 4; 5 6 7 8 -->
+  <p class="text">选择 你已经喝的水量</p>
+  <div class="cups">
+    <div class="cup cup-small">250ml</div>
+    <div class="cup cup-small">250ml</div>
+    <div class="cup cup-small">250ml</div>
+    <div class="cup cup-small">250ml</div>
+    <div class="cup cup-small">250ml</div>
+    <div class="cup cup-small">250ml</div>
+    <div class="cup cup-small">250ml</div>
+    <div class="cup cup-small">250ml</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
