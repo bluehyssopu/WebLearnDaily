@@ -12,17 +12,61 @@
   <div id="app"></div>
 
   <template id="my-app">
-    <h2>{{ message }}</h2>
+    <!-- 1，绑定textarea -->
+    <textarea name="intro" id="intro" cols="30" row="10" v-model="intro"></textarea>
+    <h2>intro: {{ intro }}</h2>
+
+    <!-- 2. 绑定 checkbox -->
+    <!-- 2.1 单选框 -->
+    <label for="agree">
+      <input type="checkbox" id="agree" v-model="isAgree">同意协议
+    </label>
+    <h2>isAgree: {{ isAgree }}</h2>
+
+    <!-- 2.2 多选框 -->
+    <span>你的爱好：</span>
+    <label for="basketball">
+      <input type="checkbox" id="basketball" v-model="hobbies" value="basketball"> 篮球
+    </label>
+    <label for="football">
+      <input type="checkbox" id="football" v-model="hobbies" value="football"> 足球
+    </label>
+    <label for="tennis">
+      <input type="checkbox" id="tennis" v-model="hobbies" value="tennis"> 网球
+    </label>
+    <h2>hobbies: {{ hobbies }}</h2>
   </template>
 
-  <script src="../js/vue.js"></script>
+  <!-- 3. radio -->
+  <span>你的性别：</span>
+  <label for="male">
+    <input id="male" type="radio" value="male" v-model="gender"> 男
+  </label>
+  <label for="female">
+    <input id="female" type="radio" value="female" v-model="gender"> 女
+  </label>
+  <h2>gender: {{ gender }}</h2>
 
+  <!-- 4. select -->
+  <span>喜欢的水果: </span>
+  <select v-model="fruit" multiple size="2">
+    <option value="apple">苹果</option>
+    <option value="orange">橘子</option>
+    <option value="banana">香蕉</option>
+  </select>
+  <h2>fruit: {{ fruit }}</h2>
+
+  <script src="../js/vue.js"></script>
   <script>
     const App = {
       template: '#my-app',
       data() {
         return {
-          message: 'Hello World'
+          intro: 'Hello World',
+          isAgree: false,
+          hobbies: [],
+          gender: "male",
+          fruit: "apple"
         }
       }
     }

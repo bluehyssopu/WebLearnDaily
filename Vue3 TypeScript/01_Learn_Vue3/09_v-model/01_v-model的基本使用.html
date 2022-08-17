@@ -11,7 +11,7 @@
     <div id="app"></div>
 
     <template id="my-app">
-      <!--本质上 v-bind 绑定value  监听input事件更新message-->
+      <!-- 1.v-bind value的绑定 2.监听input事件 更新message的值 -->
       <!-- <input type="text" :value="message" @input="inputChange"> -->
       <input type="text" v-model="message" />
       <h2>{{ message }}</h2>
