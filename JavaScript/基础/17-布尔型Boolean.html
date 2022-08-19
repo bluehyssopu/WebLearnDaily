@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var flag = true;
+        var flag1 = false;
+        console.log(flag + 1);      // 结果为：2    true在加法运算中当做1计算
+
+        // 如果一个变量声明未赋值 就是 undefined 未定义数据类型
+        var str;
+        console.log(str);           // undefined
+        var variable = undefined;
+        console.log(variable + 'pink');     // undefinedpink
+        console.log(variable + 1);  // NaN
+
+        //空值
+        var space = null;
+        console.log(space + 'pink');        // nullpink
+        console.log(space + 1);         // 1
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

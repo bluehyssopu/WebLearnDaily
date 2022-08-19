@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 更新变量
+        var myname = "pink";
+        myname = "dilireba";
+        console.log(myname);
+        // 声明多个变量
+        var age = 18, address = "琥珀园南关村", gz = 2000;
+        // var myname = "卡卡西";
+        // var address = "火影村";
+        // var email = "123@qq.com";
+        // var money = 2000;效果相同
+
+        // 声明变量的特殊情况
+        // 3.1 只声明 不赋值
+        var sex;
+        console.log(sex);        // 输出 undefined 未赋值 程序不知道是啥
+        // 3.2 不声明 不赋值
+        console.log(tel);       // Uncaught ReferenceError: tel is not defined 会报错
+        // 3.3 不声明 直接赋值使用
+        qq = 120;
+        console.log(qq);        // 120 可以使用 ……
+
+        // 注意 最好 声明 并且 赋值
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

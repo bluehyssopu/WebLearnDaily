@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function isRunNian(year) {
+            var flag;
+            if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+                flag = true;
+            } else {
+                flag = false;
+            }
+            return flag;
+        }
+        alert(isRunNian(1999));
+        alert(isRunNian(2000));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

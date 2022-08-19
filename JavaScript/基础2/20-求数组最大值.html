@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fn() {
+            var Max = arguments[0];
+            for (var i = 1; i < arguments.length; i++) {
+                if (arguments[i] > Max) {
+                    Max = arguments[i];
+                }
+            }
+            console.log(Max);
+        }
+        fn(1, 2, 5, 9);
+        fn(46, 29, 40, 67);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

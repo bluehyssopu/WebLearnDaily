@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 创建对象的三种方式
+        // 1. 字面量
+        var obj = {};
+        var obj = {
+            uname: "张三丰",
+            uage: 18,
+            usex: '男',
+            usayHi: function () {
+                console.log(("hi~~~"));
+            }
+        }
+
+        console.log(obj.uname);
+
+        // 2. new
+        function Star(name, sex, age) {
+            this.name = name;
+            this.sex = sex;
+            this.age = age;
+        }
+        var ldh = new Star('刘德华', '男', 18);
+        console.log(ldh.name);
+        console.log(ldh.age);
+        // 3.
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = prompt("请输入班级总人数");
+        var data = 0.0;
+        for (let index = 1; index <= num; index++) {
+            var score = prompt("请输入第" + index + "个学生的成绩"); 
+            // data = Number(score) + data;
+            data += parseFloat(score)
+        }
+        var aver = data / num;
+        alert("班级总成绩为"+ data + "\n班级平均成绩为" + aver);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

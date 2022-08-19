@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = 10;
+        ++a;
+        console.log(++a + 10);      // 22
+
+        var b = 10;
+        b++;        // 11
+        var d = b++ + 2;    // 13
+        console.log(d);     // 13
+
+        var e = 10;
+        var f = e++ + ++e;  // 10 + 12
+        console.log(f);     // 22
+
+        // 在开发时 一般单独写前置递增 或 后置递增
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

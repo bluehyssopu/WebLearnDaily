@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 猜数字游戏
+        // 1. 随机生成一个数字(1， 10)
+        // 2. 一直循环
+        // 3. 直到相等
+
+        // Math.floor() 为向下取整
+        function getRandom(min, max) {
+            return Math.floor((max - min) * Math.random() + min);
+        }
+        var random = getRandom(1, 100);
+        console.log(random);
+        while (true) {
+            var input = prompt("请输入你猜想的数字：");
+            if (input > random) {
+                alert("猜大了");
+            } else if (input < random) {
+                alert("猜小了");
+            } else {
+                alert("猜对了！");
+                break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

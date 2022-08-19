@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = ['a', 'b', 'c', 'r', 'a', 'c', 'e'];
+        var newArr = [];
+        newArr.push(arr[0]);
+        for (var i = 1; i < arr.length; i++) {
+            var flag = 0;
+            for (var j = 0; j < newArr.length; j++) {
+                if (newArr[j] == arr[i]) {
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0) {
+                newArr.push(arr[i]);
+            }
+        }
+        console.log(newArr);
+
+        function unique(arr) {
+            var newArr = [];
+            newArr.push(arr[0]);
+            for (var i = 1; i < arr.length; i++) {
+                var flag = 0;
+                for (var j = 0; j < newArr.length; j++) {
+                    if (newArr[j] == arr[i]) {
+                        flag = 1;
+                        break;
+                    }
+                }
+                if (flag == 0) {
+                    newArr.push(arr[i]);
+                }
+                /*
+                if(newArr.indexOf(arr[i] == -1)) {
+                    newArr.push(arr[i]);
+                }
+                */
+            }
+            return newArr;
+        }
+        console.log(unique([2, 4, 5, 6, 3, 2, 90])); 
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

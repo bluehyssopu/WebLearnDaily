@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var result = 100;
+        var strs = "请输入您要进行的操作：\n 1.存钱\n 2.取钱\n 3. 查询余额\n 4. 退出 ";
+        var num, flag=0;
+        while (num = prompt(strs)) {
+            switch (Number(num)) {
+                case 1:
+                    var RaiseMoney = prompt("请输入您要存入的钱数");
+                    result += Number(RaiseMoney);
+                    alert("您账户余额" + result);
+                    break;
+
+                case 2:
+                    var LeaveMoney = prompt("请输入您要取出的钱数");
+                    if (Number(LeaveMoney <= result)) {
+                        result -= Number(LeaveMoney);
+                        alert("您账户余额" + result);
+                    } else {
+                        alert("您账户余额不足");
+                    }
+                    break;
+
+                case 3:
+                    alert("您账户余额" + result);
+                    break;
+                case 4:
+                    alert("感谢使用！");
+                    flag = 1;
+                    break;
+                default:
+                    break;
+            }
+            if(flag == 1) {
+                break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
