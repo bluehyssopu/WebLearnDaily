@@ -10,11 +10,12 @@ module.exports = {
   // development 开发阶段设置
   // production 准备打包上线时设置 mode配置表示更多 
   mode: 'development',
-  //设置source-map,建立映射文件，方便调试错误，开发模式一般开启
+  // 设置source-map,建立映射文件，方便调试错误，开发模式一般开启
   devtool: 'source-map',
   entry: "./src/index.js",
   output: {
     // 为了优雅qvq 拼接路径 给一个绝对路径在后面拼接 其他路径
+    // path: path.resolve(__dirname, "./build"),
     path: path.resolve(__dirname, "./dist"),
     filename: "js/bundle.js", // 输出的文件名
   },
