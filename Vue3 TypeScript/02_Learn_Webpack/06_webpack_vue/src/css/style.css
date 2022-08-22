@@ -1,0 +1,9 @@
+.title {
+  /* color: red; */
+  /* 可以识别八位颜色 自动转换为rgba 后两位为透明度 */
+  color: #12345678;
+  font-weight: 700;
+  font-size: 30px;
+  /* 需要加浏览器前缀 */
+  user-select: none;
+}
