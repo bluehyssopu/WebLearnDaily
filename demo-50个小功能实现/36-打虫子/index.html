@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>打虫子</title>
+</head>
+
+<body>
+  <div class="screen">
+    <h1>抓住那只虫子</h1>
+    <button class="btn" id="start-btn">开始游戏</button>
+  </div>
+
+  <div class="screen">
+    <h1>哪个是你最讨厌的虫子</h1>
+    <ul class="insects-list">
+      <li>
+        <button class="choose-insect-btn">
+          <p>苍蝇</p>
+          <img src="http://pngimg.com/uploads/fly/fly_PNG3946.png" alt="fly">
+        </button>
+      </li>
+      <li>
+        <button class="choose-insect-btn">
+          <p>蚊子</p>
+          <img src="http://pngimg.com/uploads/mosquito/mosquito_PNG18175.png" alt="mosquito" />
+        </button>
+      </li>
+      <li>
+        <button class="choose-insect-btn">
+          <p>蜘蛛</p>
+          <img src="http://pngimg.com/uploads/spider/spider_PNG12.png" alt="spider" />
+        </button>
+      </li>
+      <li>
+        <button class="choose-insect-btn">
+          <p>蟑螂</p>
+          <img src="http://pngimg.com/uploads/roach/roach_PNG12163.png" alt="roach" />
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="screen game-container" id="game-container">
+    <h3 id="time" class="time">时间: 00:00</h3>
+    <h3 id="score" class="score">得分: 0</h3>
+    <h5 id="message" class="message">
+      你生气了吗？ <br>
+      你在玩一个不可能的游戏！
+    </h5>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
