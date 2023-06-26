@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>搜索框实时用户过滤器</title>
+</head>
+<body>
+  <div class="container">
+    <!-- container容器中放了两个盒子 一个搜索输入盒子 一个展示结果盒子 -->
+    <header class="header">
+      <h4 class="title">实时用户过滤器</h4>
+      <small class="subtitle">通过昵称或位置信息搜索</small>
+      <input type="text" id="filter" placeholder="Search">
+    </header>
+
+    <ul id="result" class="user-list">
+      <li>
+        <h3>Loading</h3>
+      </li>
+    </ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
