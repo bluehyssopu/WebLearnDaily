@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户个性动态标签</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: #f7f9fe;
+    }
+    
+    .container {
+      display: flex;
+      padding-top: 1rem;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .author-info {
+      display: flex;
+      align-items: center;
+      margin: 0 0 16px 0;
+    }
+
+    .author-tag-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .author-tag-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .author-img {
+      margin: 0 30px;
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+      position: relative;
+      background: var(--guole-secondbg);
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .author-img img {
+      border-radius: 200px;
+    }
+
+    .author-tag {
+      transform: translate(0, -4px);
+      padding: 1px 8px;
+      background: #fff;
+      border: 1px solid #e3e8f7;
+      border-radius: 40px;
+      margin-top: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 5px 12px -5px rgba(102, 68, 68, 0.00);
+      animation: 6s ease-in-out 0s infinite normal none running floating;
+    }
+
+    .author-tag:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .author-tag-right .author-tag:first-child,
+    .author-tag-right .author-tag:last-child {
+      margin-left: -16px;
+    }
+
+    @keyframes floating {
+      0% {
+        transform: translate(0, -4px)
+      }
+
+      50% {
+        transform: translate(0, 4px)
+      }
+
+      100% {
+        transform: translate(0, -4px)
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="author-info">
+      <div class="author-tag-left">
+        <span class="author-tag">⚛️ 稀有 INFJ 物种</span>
+        <span class="author-tag">🤖️数码科技爱好者</span>
+        <span class="author-tag">🏕️ 户外活动冲冲冲</span>
+        <span class="author-tag">🙅‍♂ 甜食坚决抵制者</span>
+        <span class="author-tag">🔨 折腾研究不停歇</span>
+      </div>
+      <div class="author-img">
+        <img class="entered loaded" src="https://cdn.sa.net/2024/02/26/o4aLYDMfcb5Eji6.jpg"
+          data-lazy-src="https://cdn.sa.net/2024/02/26/o4aLYDMfcb5Eji6.jpg" style="width:100%;height:100%"
+          data-ll-status="loaded">
+      </div>
+      <div class="author-tag-right">
+        <span class="author-tag">大海的忠实听众 🌊</span>
+        <span class="author-tag">一腔热血好青年 🔥</span>
+        <span class="author-tag">人间美好捕捉师 📸</span>
+        <span class="author-tag">雨中漫步独欢喜 🌦️</span>
+        <span class="author-tag">热爱自由与和平 🕊️</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
